@@ -20,7 +20,7 @@ mongoose.connect(process.env.mongoURI || 'mongodb://localhost:27017/clipboar3d',
 
 const app = express();
 app.use(cors({
-    origin: 'https://ledepointadmin.vercel.app/'
+    origin: 'https://ledepointadmin.vercel.app'
 }))
 app.use(bodyParser.json());
 
