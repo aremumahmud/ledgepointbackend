@@ -15,7 +15,7 @@ const path = require('path');
 
 const caCertPath = path.resolve(__dirname, './ca.pem');
 const caCert = fs.readFileSync(caCertPath).toString();
-console.log(caCert)
+// console.log(caCert)
 const knex = require('knex');
 
 const db = knex({
