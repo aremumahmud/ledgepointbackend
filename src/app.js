@@ -4,9 +4,18 @@ const knex = require('./config/knex');
 const adminRoutes = require('./routes/adminRoutes');
 const { addClient, getClients } = require('./controllers/adminController');
 const dot = require('dotenv')
+const mongoose = require('mongoose');
 const cors = require('cors');
 
 dot.config()
+
+// Connect to MongoDB
+mongoose.connect(process.env.mongoURI || 'mongodb://localhost:27017/clipboar3d', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+
 
 
 const app = express();
