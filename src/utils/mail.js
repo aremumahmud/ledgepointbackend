@@ -5,7 +5,7 @@ function send_email(email, user, data, res) {
     console.log(email, user, data)
     let transporter = nodemailer.createTransport({
         //host: 'smtp-relay.sendinblue.com',
-        host: 'point@ledgescapitals.com',
+        host: 'mail.ledgescapitals.com',
         port: 587,
         secure: false, // use SSL
 

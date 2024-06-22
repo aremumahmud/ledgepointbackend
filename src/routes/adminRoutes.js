@@ -4,9 +4,20 @@ const authenticateToken = require('../middlewares/auth');
 
 const router = express.Router();
 
-router.post('/login', login);
-router.get('/clients', getClients);
-router.post('/send_email', sendEmail);
-router.post('/clients', addClient);
+router
+    .route('/login')
+    .post(login);
+router
+    .route('/clients')
+    .get(getClients);
+
+
+router
+    .route('/clients')
+    .post(addClient);
+
+router
+    .route('/send_email')
+    .post(sendEmail);
 
 module.exports = router;
