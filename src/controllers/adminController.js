@@ -24,7 +24,10 @@ exports.getClients = async(req, res) => {
 
 exports.sendEmail = async(req, res) => {
     const { email, investorID, client_name } = req.body;
+
+    console.log()
     const client = await investor.findById(investorID);
+    console.log(investorID, client)
 
     if (!client) {
         return res.status(404).send('Client not found');
