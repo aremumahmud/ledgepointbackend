@@ -19,9 +19,8 @@ mongoose.connect(process.env.mongoURI || 'mongodb://localhost:27017/clipboar3d',
 
 
 const app = express();
-app.use(cors({
-    origin: 'https://ledepointadmin.vercel.app'
-}))
+app.use(cors())
+
 app.use(bodyParser.json());
 
 app.use('/api/admin', adminRoutes);
