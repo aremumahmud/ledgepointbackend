@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/login', login);
 router.get('/clients', getClients);
-router.post('/send-email', sendEmail);
+router.post('/send_email', sendEmail);
 router.post('/clients', addClient);
 
 module.exports = router;
