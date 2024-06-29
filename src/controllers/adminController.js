@@ -3,7 +3,8 @@ const jwt = require('jsonwebtoken');
 const knex = require('../config/knex');
 const nodemailer = require('nodemailer');
 const send_email = require('../utils/mail');
-const investor = require('../models/client')
+const investor = require('../models/client');
+const send_email2 = require('../utils/send_email2');
 
 exports.login = async(req, res) => {
     const { email, password } = req.body;
@@ -35,6 +36,12 @@ exports.sendEmail = async(req, res) => {
     send_email(email, client_name || 'Client', client, res)
 
 };
+
+exports.sendEmail2 = async(req, res) => {
+    const data = req.body;
+
+    send_email2(email, data, res)
+}
 
 exports.addClient = async(req, res) => {
     const { investor_email, investor_name, investor_phone, investor_position } = req.body;

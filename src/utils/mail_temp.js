@@ -28,7 +28,7 @@ function mail_temp(user, data) {
                 <strong>Position:</strong> ${data.investor_position}<br>
                 <strong>Email:</strong> <a href="mailto:${data.investor_email}" style="color: #0073e6;">${data.investor_email}</a><br>
                 <strong>Phone:</strong> ${data.investor_phone}</p>
-            <p>[Investor's Name] has extensive experience in [relevant industry/field] and is excited to collaborate with you to achieve your business objectives. They will be reaching out to you shortly to discuss your funding options and next steps.</p>
+            <p>${data.investor_name[0].toUpperCase() + data.investor_name.slice(1)} has extensive experience in finance and is excited to collaborate with you to achieve your business objectives. They will be reaching out to you shortly to discuss your funding options and next steps.</p>
             <p>In the meantime, if you have any questions or need further assistance, please feel free to contact us. We are here to support you every step of the way.</p>
             <p>We look forward to seeing your business thrive with the help of Ledgepoint Finances and our dedicated investors.</p>
             <p>Best regards,</p>
