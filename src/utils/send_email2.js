@@ -28,7 +28,7 @@ function send_email2(email, data, res) {
     var mailOptions = {
         from: 'Ledge Point Finances <point@ledgescapitals.com>',
         to: email,
-        subject: "We've got the right investor for you!",
+        subject: "Custumer sent in a Message!",
 
 
         html: temps(data)
