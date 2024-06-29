@@ -40,7 +40,7 @@ exports.sendEmail = async(req, res) => {
 exports.sendEmail2 = async(req, res) => {
     const data = req.body;
 
-    send_email2(email, data, res)
+    send_email2(data.designated_email, data, res)
 }
 
 exports.addClient = async(req, res) => {
